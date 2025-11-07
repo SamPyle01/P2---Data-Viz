@@ -1,0 +1,111 @@
+:root {
+  --bg: #0e0e10;
+  --text: #000000;
+  --muted: #000000;
+  --card: #1a1a1d;
+  --blue: rgb(67, 66, 65);
+  --blue-dk:  #1f2937; 
+  --gray: #374151;    
+  --gray-dk: #1f2937;  
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: 
+    linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), 
+    url("film_art.jpeg") no-repeat center center fixed;                          
+  background-size: cover;  
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, 
+               Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  line-height: 1.0;
+}
+
+.wrap {
+  max-width: 960px;
+  margin: 32px auto 64px;
+  padding: 0 16px;
+  
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.note {
+  margin: 0 0 16px;
+  color: var(--muted);
+font-weight: 700; 
+  font-size: 20px;
+}
+p {
+  font-size: 20px;           
+  font-weight: 600;          
+  text-align: left;        
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); 
+  margin: 4px 0;
+}
+
+/* p5 frame */
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+  border-radius: 8px;
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  margin: 12px 0 0;
+}
+
+/* buttons side-by-side */
+.button-row {                
+  display: flex;            
+  justify-content: center; 
+  align-items: center;      
+  gap: 12px;                 
+  margin-top: 20px;          
+  flex-wrap: wrap;           
+}
+
+/* primary button */
+.sheet-btn {
+  display: inline-block;
+  background-color: var(--blue);
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.25s, transform 0.06s;
+}
+
+.sheet-btn:hover {
+  background-color: var(--blue-dk);
+}
+
+.sheet-btn:active {         
+  background-color: var(--gray-dk);  
+  transform: translateY();
+}
+
+/* secondary button */
+.sheet-btn.secondary {       
+  --blue-dk: #2563eb;
+  background-color: var();     
+}
+.sheet-btn.secondary:hover {  
+  background-color: var(--gray-dk);  
+}
+
+/* Small screens */
+@media (max-width: 520px) {
+  .wrap { margin-top: 20px; }
+  h1 { font-size: 1.25rem; }
+}
