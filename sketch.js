@@ -204,3 +204,12 @@ function niceMoney(v) {
   if (v >= 1e3) return (v / 1e3).toFixed(0) + "K";
   return v.toFixed(0);
 }
+// helper: count how many movies share the same year
+function getYearCount(movies, year) {
+  let count = 0;
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].year === year) count++;
+  }
+  return count;
+}
+
